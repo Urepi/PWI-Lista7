@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb, amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\newtheorem{twierdzenie}{Twierdzenie}
+
+\begin{document}
+
+\section{Czas Uniksowy}
+Czas Uniksowy (z ang. \emph{Unix Time}), to sposób liczenia czasu jako liczby sekund od 1 stycznia 1970 r., tak 
+zwanej ery uniksa (z ang. \emph{Unix Era}). Jest to system przydatny szczególnie w informatyce, gdzie ułatwia on np. 
+prównywanie dat. 
+
+Liczba sekund jest jednak trzymana jedynie na 32 bitach, 
+więc największą liczbę jaką może przechować jest 2 147 483 647. Po tylu sekundach od 1 stycznia 1970, czyli 19 stycznia 2038 roku o 03:14:07 UTC, licznik zwyczajnie nie będzie mógł
+kontynuować (albo się wyzeruje i wedle komputerów znów będziemy w roku 1970). Tak więc przed upłynięciem tego czasu
+trzeba będzie znaleźć rozwiązanie tego problemu. Możemy np. 
+zmienić miejsce na 64 bity, wówczas następny taki problem 
+pojawi się 9 listopada 584 554 051 223 roku o godzinie 07:00:15 UTC. Oczywiście takie rozwiązanie samo w sobie jest 
+problematyczne i tylko teoretyczne.
+
+\section{Matematyka}
+\begin{twierdzenie}
+    \[\sum_{i=0}^{n}2^i+1=2^{n+1} \]
+\end{twierdzenie}
+\begin{proof}
+    Baza indukcji, dla \(n=0\):
+
+    \[
+    \sum_{i=0}^{0}2^0+1 = 2 = 2^1
+    \]
+
+    Krok indukcyjny, załóżmy prawdziwość twierdzenia dla n
+    i udowodnijmy prawdziwość dla n+1:
+    \[
+    \sum_{i=0}^{n+1}2^i+1=\sum_{i=0}^{n}2^i+2^{n+1}+1=
+    2^{n+1}-1+2^{n+1}+1=2^{n+2}
+    \]
+
+\end{proof}
+
+\section{Zwierzątko}
+
+\begin{verbatim}
+                    __
+         .,-;-;-,. /'_\
+       _/_/_/_|_\_\) /
+     '-<_><_><_><_>=/\
+       `/_/====/_/-'\_\
+        ""     ""    ""
+
+\end{verbatim}
+
+
+
+
+\end{document}
